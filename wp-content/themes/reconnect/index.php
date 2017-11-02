@@ -30,6 +30,7 @@ get_header(); ?>
 			<?php
 			global $wp_query;
 			// Start the loop.
+			echo '<div class="group">';
 			while ( have_posts() ) : the_post();
 
 				/*
@@ -38,15 +39,11 @@ get_header(); ?>
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
 				// get_template_part( 'content', get_post_format() );
-				if ( $wp_query->current_post == 0 ) {
+				if ( $wp_query->current_post == 0 && !get_query_var('paged') ) {
 					echo '<div class="featured-post" style="background-image:url(';
 					the_post_thumbnail_url('full');
 					echo ')">';
-					echo '<div class="card" onclick="window.location=';
-					echo "'";
-					the_permalink();
-					echo "'";
-					echo'" tabindex="0">';
+					echo '<div class="card">';
 					the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 					echo '<span class="entry-details">';
 					echo get_the_date('m.d.Y');
@@ -58,14 +55,12 @@ get_header(); ?>
 					echo '</div>';
 					echo '<h2 class="older-posts">Older Posts</h2>';
 				} else {
-					echo '<div class="card" onclick="window.location=';
-					echo "'";
-					the_permalink();
-					echo "'";
-					echo'" tabindex="0">';
-					echo '<div class="thumbnail-image" style="background-image:url(';
+					echo '<div class="card">';
+					echo '<a class="thumbnail-image" style="background-image:url(';
 					the_post_thumbnail_url('full');
-					echo ')"></div>';
+					echo ')" href="';
+					echo get_permalink();
+					echo '"></a>';
 					the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 					echo '<span class="entry-details">';
 					echo get_the_date('m.d.Y');
@@ -78,6 +73,7 @@ get_header(); ?>
 
 			// End the loop.
 			endwhile;
+			echo '</div>';
 
 			// Previous/next page navigation.
 			the_posts_pagination( array(

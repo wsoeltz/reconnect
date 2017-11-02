@@ -22,6 +22,7 @@
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<?php wp_head(); ?>
 	<script src="https://use.fontawesome.com/ae56797031.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body <?php body_class(); ?>>

@@ -7,9 +7,9 @@
  * @since Twenty Fifteen 1.0
  */
 
+
 if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) || is_active_sidebar( 'sidebar-1' )  ) : ?>
 	<div id="secondary" class="secondary">
-
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 			<hr>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
@@ -74,5 +74,11 @@ if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) || is_active_sidebar(
 	<div class="copyright-information">
 		<small>Content Copyright &copy; Kyle Soeltz <?php echo date("Y"); ?></small>
 	</div>
-
+	<button class="toggle-mobile-menu">Menu</button>
 <?php endif; ?>
+
+<script type="text/javascript">
+	$('button.toggle-mobile-menu').on('click', function(){
+		$('div#sidebar').toggleClass('open');
+	});
+</script>

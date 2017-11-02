@@ -2,11 +2,17 @@ body{
 	font-size: 18px;
 	font-family: "Proxima Soft", sans-serif;
 	font-weight: 400;
-	color: #231f20;
+	color: $color-charcoal;
 }
 
 * {
 	box-sizing: border-box;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 select,input[type="search"] {
@@ -46,6 +52,15 @@ small {
 
 p {
 	line-height: 1.4em;
+	color: $color-charcoal;
+}
+
+a {
+	color: $color-teal;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 div[tabindex] {
