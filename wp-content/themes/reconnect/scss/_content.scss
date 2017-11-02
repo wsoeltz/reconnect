@@ -1,0 +1,75 @@
+body {
+	height: 100%;
+	background-color: $color-cream;
+}
+div#content {
+	padding-left: 224px;
+}
+
+.home {
+	main#main {
+		margin-left: 50vw;
+		padding: 20px;
+	}
+}
+
+.featured-post {
+	position: fixed;
+	width: 50vw;
+	left: 224px;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 20px;
+	.card {
+		position: absolute;
+		bottom: 0;
+		width: 90%;
+		left: 0;
+		right: 0;
+		margin: auto;
+		margin-bottom: 38px;
+	}
+}
+
+.card {
+	background-color: rgba($color-white, .9);
+	padding: 20px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	@include minimalBoxShadow;
+	margin-bottom: 27px;
+}
+
+h2 {
+	font-family: Henriette, serif;
+	font-size: 23px;
+	margin-bottom: 16px;
+	a {
+		color: $color-charcoal;
+		text-decoration: none;
+	}
+}
+
+h2.older-posts, .featured-post h2.entry-title {
+	font-size: 27px;
+}
+
+h2.older-posts {
+	text-align: center;
+	color: lighten($color-charcoal, 20);
+	max-width: 200px;
+	border-bottom: solid 1px lighten($color-charcoal, 40);
+	margin: 0 auto 30px;
+}
+
+span.entry-details {
+	font-size: 14px;
+	color: lighten($color-charcoal, 30);
+	font-style: italic;
+	display: block;
+	margin-bottom: 20px;
+}
