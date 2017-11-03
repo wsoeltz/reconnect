@@ -11,12 +11,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php
+	<header class="entry-header" style="background-image: url('<?php
 		// Post thumbnail.
-		twentyfifteen_post_thumbnail();
-	?>
-
-	<header class="entry-header">
+		the_post_thumbnail_url('full');
+	?>');">
 		<?php
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
@@ -26,7 +24,10 @@
 		?>
 	</header><!-- .entry-header -->
 
+
 	<div class="entry-content">
+		<?php twentyfifteen_entry_meta(); ?>
+
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
@@ -45,15 +46,8 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<?php
-		// Author bio.
-		if ( is_single() && get_the_author_meta( 'description' ) ) :
-			get_template_part( 'author-bio' );
-		endif;
-	?>
 
 	<footer class="entry-footer">
-		<?php twentyfifteen_entry_meta(); ?>
 		<?php edit_post_link( __( 'Edit', 'twentyfifteen' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 

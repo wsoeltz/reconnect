@@ -55,7 +55,7 @@ get_header(); ?>
 					echo '</div>';
 					echo '<h2 class="older-posts">Older Posts</h2>';
 				} else {
-					echo '<div class="card">';
+					echo '<div class="card matchHeight">';
 					echo '<a class="thumbnail-image" style="background-image:url(';
 					the_post_thumbnail_url('full');
 					echo ')" href="';
@@ -92,4 +92,12 @@ get_header(); ?>
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
 
+
+
 <?php get_footer(); ?>
+
+<script type="text/javascript">
+		$(function() {
+			$('.matchHeight').matchHeight();
+		});
+</script>

@@ -79,6 +79,6 @@ if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) || is_active_sidebar(
 
 <script type="text/javascript">
 	$('button.toggle-mobile-menu').on('click', function(){
-		$('div#sidebar').toggleClass('open');
+		$('body').toggleClass('menu-open');
 	});
 </script>

@@ -45,6 +45,11 @@ input[type="search"] {
     padding-left: 39px !important;
 }
 
+h1 {
+	font-family: Henriette, serif;
+	font-size: 50px;
+}
+
 small {
 	font-size: 12px;
 	letter-spacing: .6px;
@@ -53,6 +58,9 @@ small {
 p {
 	line-height: 1.4em;
 	color: $color-charcoal;
+	&:not(:last-child) {
+		margin-bottom: 27px;
+	}
 }
 
 a {
@@ -72,5 +80,64 @@ div[tabindex] {
 	}
 	&:focus {
 	    outline: dotted 1px #bababc;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+.entry-content {
+	max-width: 1000px;
+	padding: 0 60px;
+	img {
+		display: block;
+		max-height: 450px;
+		border-radius: 4px;
+		@include darkBoxShadow;
+	}
+	figure {
+		width: 100%;
+		text-align: center;
+		margin: 27px auto;
+		img {
+			margin: 0 auto 10px;
+			display: block;
+		}
+		figcaption {
+			color: lighten($color-charcoal, 20);
+			font-style: italic;
+		}
+	}
+	time.updated:not(.entry-date) {
+		display: none;
+	}
+	.posted-on {
+		display: block;
+		font-style: italic;
+		font-size: 16px;
+		margin-bottom: 10px;
+		a:before {
+			content: 'Posted '
+		}
+	}
+	.byline {
+		display: block;
+		font-style: italic;
+		font-size: 16px;
+		margin-bottom: 40px;
+		a:before {
+			content: 'By '
+		}
+	}
+}
+
+
+@media (max-width: 750px) {
+	.entry-content {
+		padding: 0 20px;
+	}
+	h1 {
+		font-size: 27px;
 	}
 }

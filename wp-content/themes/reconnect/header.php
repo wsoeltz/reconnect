@@ -20,6 +20,14 @@
 	<![endif]-->
 	<script src="https://use.typekit.net/rfn7rbz.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+	<?php
+		function load_js() {
+				wp_deregister_script( 'jquery' );
+				wp_enqueue_script( 'plugins', get_template_directory_uri() . '/js/plugins.js', false, NULL, 'all');
+			}
+		add_action( 'wp_enqueue_scripts', 'load_js' );
+	?>
 	<?php wp_head(); ?>
 	<script src="https://use.fontawesome.com/ae56797031.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
