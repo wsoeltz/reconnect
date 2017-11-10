@@ -47,8 +47,27 @@ input[type="search"] {
 
 h1 {
 	font-family: Henriette, serif;
-	font-size: 50px;
+	font-size: 40px;
 }
+
+h1.page-title {
+
+}
+
+header.page-header {
+	padding: 20px 0;
+}
+
+h3 {
+	text-align: center;
+	font-family: Henriette, serif;
+	font-size: 21px;
+	color: lighten($color-charcoal, 20);
+	max-width: 200px;
+	border-bottom: solid 1px lighten($color-charcoal, 40);
+	margin: 0 auto 30px;
+}
+
 
 small {
 	font-size: 12px;
@@ -133,8 +152,29 @@ img {
 }
 
 
+.search-results main {
+	max-width: 1000px;
+	padding: 0 60px;
+}
+
+.read-more {
+	margin-top: 12px;
+    display: inline-block;
+    border: solid 1px $color-teal;
+    color: $color-teal;
+    padding: 4px;
+    border-radius: 4px;
+    margin-top: 12px;
+    float: right;
+	&:hover {
+		text-decoration: none;
+		background-color: $color-teal;
+		color: $color-offWhite;
+	}
+}
+
 @media (max-width: 750px) {
-	.entry-content {
+	.entry-content, .search-results main {
 		padding: 0 20px;
 	}
 	h1 {

@@ -411,6 +411,19 @@ require get_template_directory() . '/inc/customizer.php';
 
 /* Change Excerpt length */
 function custom_excerpt_length( $length ) {
-	return 30;
+	return 300;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function custom_read_more() {
+    return '...<br /> <a class="read-more" href="'.get_permalink(get_the_ID()).'">Continue&nbsp;Reading&nbsp;&raquo;</a>';
+}
+function inline_read_more() {
+    return '... <a class="" href="'.get_permalink(get_the_ID()).'">Continue&nbsp;Reading&nbsp;&raquo;</a>';
+}
+function excerpt($limit) {
+    return wp_trim_words(get_the_excerpt(), $limit, custom_read_more());
+}
+function excerpt_inline($limit) {
+    return wp_trim_words(get_the_excerpt(), $limit, inline_read_more());
+}

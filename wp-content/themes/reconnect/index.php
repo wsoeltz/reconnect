@@ -43,19 +43,22 @@ get_header(); ?>
 					echo '<div class="featured-post" style="background-image:url(';
 					the_post_thumbnail_url('full');
 					echo ')">';
-					echo '<div class="card">';
+					echo '<h3>Featured</h3>';
+					echo '<div class="card group">';
 					the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 					echo '<span class="entry-details">';
 					echo get_the_date('m.d.Y');
 					echo ' - ';
 					echo get_the_author();
 					echo '</span>';
-					the_excerpt();
+					echo '<p>';
+					echo excerpt(60);
+					echo '</p>';
 					echo '</div>';
 					echo '</div>';
-					echo '<h2 class="older-posts">Older Posts</h2>';
+					echo '<h3>Older Posts</h3>';
 				} else {
-					echo '<div class="card matchHeight">';
+					echo '<div class="card matchHeight group">';
 					echo '<a class="thumbnail-image" style="background-image:url(';
 					the_post_thumbnail_url('full');
 					echo ')" href="';
@@ -67,7 +70,9 @@ get_header(); ?>
 					echo ' - ';
 					echo get_the_author();
 					echo '</span>';
-					the_excerpt();
+					echo '<p>';
+					echo excerpt(30);
+					echo '</p>';
 					echo '</div>';
 				}
 
