@@ -427,3 +427,9 @@ function excerpt($limit) {
 function excerpt_inline($limit) {
     return wp_trim_words(get_the_excerpt(), $limit, inline_read_more());
 }
+function load_why_reconnect_assets() {
+    if (  is_page('Why Reconnect') ) {
+        wp_enqueue_style( 'why-reconnect-css', get_template_directory_uri() . '/why-reconnect-assets/css/main.css', false, NULL, 'all');
+        wp_enqueue_script( 'why-reconnect-js', get_template_directory_uri() . '/why-reconnect-assets/js/main.js', false, NULL, 'all');
+    }
+} add_action('wp_enqueue_scripts', 'wp_enqueue_style');

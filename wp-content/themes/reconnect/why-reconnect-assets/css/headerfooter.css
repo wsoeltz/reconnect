@@ -1,0 +1,187 @@
+/***********************
+
+	Reconnect Campaign
+	William Soeltz-Szoets
+    UML Senior Studio Spring 2014
+    Header and footer styling for how.html and share.html
+
+***********************/
+
+/***********************
+
+			Base Styles
+
+***********************/
+
+
+body{
+	font-family: "Open Sans";
+	background-position: center 0px;
+}
+
+
+
+
+/***********************
+
+			Alignment
+
+**********************/
+
+	/*************
+
+			Header
+
+	*************/
+
+	/* position header to stretch across screen and be static */
+	div#header{
+		width:100%;
+		height:45px;
+		padding-top: 11px;
+		background-color: #1b1816; /* warm black */
+		position: fixed;
+		top: 0px;
+		z-index: 100000;
+	}
+
+	div#headerWrapper{
+		width: 1040px;
+		margin: 0 auto;
+		color: #d7e2e8; /* blue white */
+	}
+
+	div#logoHome{
+		float: left;
+	}
+
+	div#header ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+	}
+
+	div#header li{
+		float: right;
+		margin: 10px;
+		font-size: 14pt;
+		font-weight: 300;
+	}
+
+	div#header a{
+		color: #d7e2e8; /* blue white */
+		text-decoration: none;
+	}
+
+	div#header a:hover{
+		text-decoration: underline;
+	}
+
+	div#headerborder{
+		width: 100%;
+		height: 56px;
+		border-bottom: solid 15px #63928a;
+		position: absolute;
+		top: 0;
+	}
+
+
+body{
+	background-color: #e5e0de;
+	
+}
+
+	/*************
+
+			Intro
+
+	*************/
+	div#introWrapper{
+		width: 100%;
+		background-repeat: no-repeat;
+		background-position: center -320px;
+		border-bottom: solid 15px #304843;
+	}
+
+	div#intro{
+		display: block;
+		width: 660px;
+		margin: 0 auto;
+		margin-top: 71px;
+		color: #e5e0de;
+		padding-left: 380px;
+		height: 366px;
+		padding-top: 120px;
+		background-image: url(../img/logoMarkOnly.png);
+		background-repeat: no-repeat;
+		background-position: 50px 68px;
+		position: relative;
+	}
+
+	div#intro h3{
+		font-size: 48px;
+		font-weight: 300;
+		margin-bottom: 48px;
+	}
+
+	div#intro p{
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 2em;
+	}
+
+	.bold{
+		font-weight: 600;
+	}
+
+	#downArrow{
+		position: absolute;
+		bottom: -35px;
+		right: 50%;
+		z-index: 1000;
+	}
+
+	/*************
+
+			Footer
+
+	*************/
+
+	div#footer{
+		width: 100%;
+		height: 154px;
+		background-color: #304843;
+		color: #bec6c4; 
+	}
+
+	div#footer a{
+		color: #bec6c4;
+		text-decoration: none;
+	}
+
+	div#footer a:hover{
+		text-decoration: underline;
+	}
+
+	div#footerwrapper{
+		width: 1040px;
+		margin: 0 auto;
+	}
+
+	div#copyright{
+		width: 280px;
+		float: left;
+		text-align: center;
+		padding-top: 64px;
+		font-size: 12px;
+	}
+
+	div#videolink{
+		width: 520px;
+		float: right;
+		text-align: right;
+		padding-top: 64px;
+		font-size: 24px;
+		font-weight: 300;
+	}

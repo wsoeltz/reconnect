@@ -12,6 +12,7 @@ div#sidebar {
 	text-align: center;
 	overflow-y: auto;
 	overflow-x: hidden;
+	z-index: 1000;
 	a {
 		color: $color-offWhite;
 		text-decoration: none;
@@ -141,7 +142,6 @@ header#masthead {
 		height: 50px;
 		padding-top: 8px;
 	    padding-bottom: 70px;
-		z-index: 100;
 		overflow: hidden;
 		header#masthead {
 			a {

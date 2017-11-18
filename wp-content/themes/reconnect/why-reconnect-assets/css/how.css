@@ -1,0 +1,101 @@
+
+div#introWrapper{
+	background-image: url(../img/howBg.jpg);
+}
+
+	/*************
+
+			Main Content
+
+	*************/
+
+	div#content{
+		width: 1040px;
+		margin: 0 auto;
+		margin-top: 64px;
+		height: 500px;
+	}
+
+	div#options{
+		width: 280px;
+		height: 500px;
+		margin-right: 40px;
+		overflow: auto;
+		float: left;
+		display: inline-block;
+	}
+		div#options ul li a{
+			display: block;
+			height: 36px;
+			border-bottom: solid 2px #304843;
+			text-decoration: none;
+			background-color: #f3edea;
+			color: #304843;
+			font-size: 20px;
+			text-transform: capitalize;
+			padding-left: 32px;
+			padding-top: 14px;
+		}
+		div#options ul li a:hover{
+			color: #f3edea;
+			background-color: #304843;
+		}
+
+	div#circle{
+		width: 320px;
+		float: left;
+		margin: 0 20px;
+		padding-top: 50px;
+		margin-right: 60px;
+		height: 450px;
+		position: relative;
+	}
+
+	div#circle table{
+		width: 300px;
+		margin-top: 20px;
+		margin-left: 30px;
+	}
+
+	div#circle td{
+		width: 150px;
+		height: 60px;
+		color:  #304843;
+	}
+
+	#canvasOverlay{
+		position: absolute;
+		top: 50px;
+		left: 0px;
+	}
+
+	div#description{
+		width: 320px;
+		float: left;
+		height: 500px;
+	}
+
+	h4#activityname{
+		text-align: right;
+		font-weight: 300;
+		width: 100%;
+		border-bottom: solid 2px #1b1816;
+		color: #1b1816;
+		text-transform: uppercase;
+		font-size: 40px;
+		margin-bottom: 75px;
+	}
+
+	p#activitydescription{
+		line-height: 2em;
+		font-size: 16px;
+	}
+
+	div#disclaimer{
+		width: 786px;
+		margin: 50px auto;
+		color: #1b1816;
+		font-size: 12px;
+		text-align: center;
+		line-height: 1.35em;
+	}
