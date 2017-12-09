@@ -27,7 +27,6 @@
 
 	<div class="entry-content">
 		<?php twentyfifteen_entry_meta(); ?>
-
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(

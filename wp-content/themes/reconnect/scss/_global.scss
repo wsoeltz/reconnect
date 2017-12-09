@@ -140,19 +140,26 @@ img {
 			content: 'Posted '
 		}
 	}
-	.byline {
-		display: block;
+	.byline, .cat-links {
+		display: inline-block;
 		font-style: italic;
 		font-size: 16px;
-		margin-bottom: 40px;
-		a:before {
+		margin-right: 5px;
+		&:before {
+			color: #366454;
 			content: 'By '
+		}
+	}
+	.cat-links {
+		margin-bottom: 40px;
+		&:before {
+			content: ' in ';
 		}
 	}
 }
 
 
-.search-results main {
+.search-results main, .category main, .author main {
 	max-width: 1000px;
 	padding: 0 60px;
 }
@@ -171,6 +178,10 @@ img {
 		background-color: $color-teal;
 		color: $color-offWhite;
 	}
+}
+
+.taxonomy-description {
+	margin: 20px 0;
 }
 
 @media (max-width: 750px) {

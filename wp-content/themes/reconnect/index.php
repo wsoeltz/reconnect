@@ -57,7 +57,7 @@ get_header(); ?>
 					echo '</div>';
 					echo '</div>';
 					echo '<h3>Older Posts</h3>';
-				} else {
+				} else if (!get_query_var('paged')) {
 					echo '<div class="card matchHeight group">';
 					echo '<a class="thumbnail-image" style="background-image:url(';
 					the_post_thumbnail_url('full');
@@ -72,6 +72,24 @@ get_header(); ?>
 					echo '</span>';
 					echo '<p>';
 					echo excerpt(30);
+					echo '</p>';
+					echo '</div>';
+				} else {
+					echo '<div class="card thumbnail-left matchHeight group">';
+					echo '<a class="thumbnail-image" style="background-image:url(';
+					the_post_thumbnail_url('full');
+					echo ')" href="';
+					echo get_permalink();
+					echo '"></a>';
+					the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+					echo '<span class="entry-details">';
+					echo get_the_date('m.d.Y');
+					echo ' - ';
+					echo get_the_author();
+					echo '</span>';
+					echo '<p>';
+					echo excerpt_inline(30);
+					// echo excerpt(30);
 					echo '</p>';
 					echo '</div>';
 				}

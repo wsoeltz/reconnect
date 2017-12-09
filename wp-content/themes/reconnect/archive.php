@@ -39,7 +39,23 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'content', get_post_format() );
+				// get_template_part( 'content', get_post_format() );
+				echo '<div class="card matchHeight group thumbnail-left">';
+				echo '<a class="thumbnail-image" style="background-image:url(';
+				the_post_thumbnail_url('full');
+				echo ')" href="';
+				echo get_permalink();
+				echo '"></a>';
+				the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+				echo '<span class="entry-details">';
+				echo get_the_date('m.d.Y');
+				echo ' - ';
+				echo get_the_author();
+				echo '</span>';
+				echo '<p>';
+				echo excerpt_inline(30);
+				echo '</p>';
+				echo '</div>';
 
 			// End the loop.
 			endwhile;
