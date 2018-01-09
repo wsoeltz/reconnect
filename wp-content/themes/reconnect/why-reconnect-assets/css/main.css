@@ -397,6 +397,8 @@ div#statistics{
 		/*height: 608px;*/
 		height: 470px;
 		color: #d7e2e8; /* blue white */
+		position: relative;
+		top: 46px;
 	}
 
 	div#footerWrapper{

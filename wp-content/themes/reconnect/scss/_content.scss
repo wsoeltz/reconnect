@@ -30,7 +30,7 @@ div#content {
         left: 0;
         right: 0;
         margin: auto;
-        padding: 250px 5% 60px 5%;
+        padding: 250px 5% 80px 5%;
         background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(100%, rgba($color-charcoal,1)));
         background: linear-gradient(to bottom, transparent 0%, rgba($color-charcoal,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222727', endColorstr='#222727',GradientType=0 );
@@ -357,6 +357,58 @@ nav.post-navigation {
     }
 }
 
+#mc_embed_signup {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 224px;
+    padding: 8px;
+    z-index: 100;
+    background-color: darken($color-charcoal, 1);
+    text-align: right;
+    p {
+        color: $color-gold;
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 600;
+        text-align: center;
+        margin-right: 12px;
+        margin-bottom: 0;
+        span {
+            color: $color-cream;
+        }
+    }
+    .mc-field-group, .clear {
+        display: inline-block;
+    }
+    input[type="email"] {
+        display: inline-block;
+        max-width: 250px;
+        background-color: rgba($color-offWhite, .1);
+        color: $color-offWhite;
+        margin-bottom: 0;
+        &:focus {
+            color: $color-charcoal;
+            background-color: rgba($color-offWhite, .8);
+        }
+    }
+    input[type="submit"] {
+        display: inline-block;
+        padding: 4px 6px;
+        border-radius: 4px;
+        background-color: rgba($color-offWhite, .1);
+        border: none;
+        color: $color-cream;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 600;
+        &:hover {
+            cursor: pointer;
+            background-color: rgba($color-offWhite, .2);
+        }
+    }
+}
+
 
 @media (max-width: 1680px) {
     .home:not(.paged) {
@@ -404,6 +456,10 @@ nav.post-navigation {
     .thumbnail-image {
         height: 200px;
     }
+    #mc_embed_signup {
+        left: 0;
+    }
+
 }
 @media (max-width: 750px) {
     .single-post {
@@ -456,6 +512,25 @@ nav.post-navigation {
                     border-color: lighten($color-teal, 8);
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    #mc_embed_signup {
+        text-align: center;
+        p {
+            span {
+                display: none;
+            }
+        }
+    }
+
+}
+@media (max-width: 500px) {
+    #mc_embed_signup {
+        p {
+            display: none;
         }
     }
 }
