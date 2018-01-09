@@ -20,6 +20,7 @@
 
 	  gtag('config', 'UA-55198370-2');
 	</script>
+	<!-- /Google Analytics -->
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
@@ -40,7 +41,15 @@
 	<?php wp_head(); ?>
 	<script src="https://use.fontawesome.com/ae56797031.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+	<!-- Google adsense -->
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	  (adsbygoogle = window.adsbygoogle || []).push({
+	    google_ad_client: "ca-pub-8705223487628395",
+	    enable_page_level_ads: true
+	  });
+	</script>
+	<!-- /Google adsense -->
 </head>
 
 <body <?php body_class(); ?>>
