@@ -20,16 +20,19 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'reconnect');
+define('DB_NAME', 'reconnect'); //local
+// define('DB_NAME', 'reconnectlifedatabase'); //godaddy
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'root'); //local
+// define('DB_USER', 'reconnectadmin'); //godaddy
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', ''); //local
+// define('DB_PASSWORD', 'camel58Goj!ra'); //godaddy
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'localhost'); //local
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');

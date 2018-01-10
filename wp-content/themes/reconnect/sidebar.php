@@ -73,6 +73,7 @@ if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) || is_active_sidebar(
 	</div><!-- .secondary -->
 	<div class="copyright-information">
 		<small>Content Copyright &copy; Kyle Soeltz <?php echo date("Y"); ?></small>
+		<br><br><a href="/terms-of-use"><small>Terms of Use</small></a>
 	</div>
 	<button class="toggle-mobile-menu">Menu</button>
 <?php endif; ?>

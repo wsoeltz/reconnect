@@ -9,7 +9,7 @@ div#content {
 .home {
     main#main {
         margin-left: 60vw;
-        padding: 20px 40px;
+        padding: 20px 40px 60px 40px;
     }
 }
 .featured-post {
@@ -193,6 +193,9 @@ a.more-link {
     .nav-next, .nav-previous {
         background-image: none !important;
         margin-bottom: 20px;
+        padding: 6px;
+        border: solid 1px rgba($color-charcoal, .1) !important;
+        background-image: none !important;
         max-width: 400px;
         a {
             span.post-title, span.meta-nav {
@@ -206,6 +209,7 @@ a.more-link {
                 text-transform: uppercase;
                 font-size: 13px;
                 font-weight: 600;
+                margin-bottom: 12px;
             }
         }
     }
@@ -326,7 +330,7 @@ nav.post-navigation {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         padding: 0 14px;
-        font-family: "Proxima Soft", arial, sans-serif;
+        font-family: "Open Sans", arial, sans-serif;
         &:focus {
             outline: 0;
             border-color: #bababc;
@@ -345,10 +349,12 @@ nav.post-navigation {
         border: none;
         background-color: $color-teal;
         color: $color-offWhite;
-        font-family: "Proxima Soft", arial, sans-serif;
+        font-family: "Open Sans", arial, sans-serif;
         text-transform: uppercase;
         padding: 8px 12px;
-        font-size: 16px;
+        letter-spacing: .01em;
+        font-size: 13px;
+        font-weight: 600;
         border-radius: 4px;
         transition: background-color .18s ease;
         &:hover {
@@ -481,7 +487,7 @@ nav.post-navigation {
     .home:not(.paged) {
         main#main {
             margin-left: 0;
-            padding: 20px;
+            padding: 20px 20px 60px 20px;
         }
     }
     .featured-post {

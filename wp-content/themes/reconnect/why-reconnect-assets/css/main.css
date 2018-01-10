@@ -30,16 +30,19 @@ body{
 			Alignment
 
 **********************/
-	#post-2 .entry-content {
+	#post-2 .entry-content, #post-12 .entry-content {
 		max-width: 100%;
 		padding: 0;
 	}
-	#post-2 .entry-content a {
+	#post-2 .entry-content a, #post-12 .entry-content a {
 		color: inherit;
 	}
-	#post-2 .entry-content a:hover {
+	#post-2 .entry-content a:hover, #post-12 .entry-content a:hover {
 		color: inherit;
 		text-decoration: inherit;
+	}
+	#post-2 .entry-content p, #post-12 .entry-content p {
+		font-size: 24px;
 	}
 
 	/*************
@@ -47,7 +50,7 @@ body{
 			Header
 
 	*************/
-	#post-2 header.entry-header {
+	#post-2 header.entry-header, #post-12 header.entry-header {
 		display: none;
 	}
 
@@ -278,6 +281,7 @@ div#statistics{
 		left: 0px;
 		display: none;
 		padding-left: 200px;
+	    margin-top: -1px;
 	}
 
 		div#subtract{
@@ -306,11 +310,14 @@ div#statistics{
 			width: 724px;
 			margin: 0 auto;
 			text-align: right;
+			padding-left: 0;
+		    margin-top: -1px;
 		}
 
 		div#necessities li{
 			display: inline-block;
 			margin-left: 434px;
+			margin-bottom: 0;
 			width: 260px;
 			padding: 10px 10px;
 			font-size: 14pt;
@@ -319,6 +326,9 @@ div#statistics{
 			text-align: right;
 			background-color: #e5e0de; /* warm white */
 			display: none;
+		}
+		div#necessities li a{
+			font-weight: 400;
 		}
 
 		div#necessities li:hover{
@@ -539,6 +549,7 @@ div#question, div#timeRemains{
 	}
 	div#necessities ul li {
 		margin-left: 0;
+
 	}
 	div#basedAverage_holder {
 		padding-left: 0;
