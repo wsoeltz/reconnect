@@ -17,32 +17,41 @@
 	?>');">
 		<?php
 			if ( is_single() ) :
-				the_title( '<h1 class="entry-title"><span>', '</span></h1>' );
+				the_title( '<h1 class="entry-title text-center"><span>', '</span></h1>' );
 			else :
-				the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+				the_title( sprintf( '<h2 class="entry-title text-center"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 			endif;
 		?>
 	</header><!-- .entry-header -->
 
 
 	<div class="entry-content">
-		<?php twentyfifteen_entry_meta(); ?>
-		<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				__( 'Continue reading %s', 'twentyfifteen' ),
-				the_title( '<span class="screen-reader-text">', '</span>', false )
-			) );
+		<section class="article-content">
+			<?php twentyfifteen_entry_meta(); ?>
+			<?php
+				/* translators: %s: Name of current post */
+				the_content( sprintf(
+					__( 'Continue reading %s', 'twentyfifteen' ),
+					the_title( '<span class="screen-reader-text">', '</span>', false )
+				) );
 
-			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>%',
-				'separator'   => '<span class="screen-reader-text">, </span>',
-			) );
-		?>
+				wp_link_pages( array(
+					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
+					'after'       => '</div>',
+					'link_before' => '<span>',
+					'link_after'  => '</span>',
+					'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>%',
+					'separator'   => '<span class="screen-reader-text">, </span>',
+				) );
+			?>
+		</section>
+		<aside class="side-content">
+			<aside class="clearfix fundraising-aside">
+				<h2><a href="https://secure.hikeformentalhealth.org/soeltz"><img src="http://reconnect.life/wp-content/uploads/2018/02/hike-for-mental-health-compressed.png" /><span class="sr-only">Hike for Mental Health</span></a></h2>
+				<!-- BEGIN z2systems.com Fundraising Sidebar Code -->
+				<script language="javascript" src="https://secure.hikeformentalhealth.org/np/publicaccess/campaignSidebar.do?campaign=102&fundraiser=8262&orgId=hike&"></script>
+				<!-- END z2systems.com Fundraising Sidebar Code --></aside>
+		</aside>
 	</div><!-- .entry-content -->
 
 
