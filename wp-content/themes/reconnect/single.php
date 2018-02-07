@@ -56,7 +56,7 @@ get_header(); ?>
 	            if( $category_posts->have_posts() ) :
 	                // Loop trough them
 	            	echo '<div class="inner">';
-	            	echo '<h2>Similar Posts</h2>';
+	            	echo '<h2>You May Also Be Interested In</h2>';
 	                while( $category_posts->have_posts() && $i < 4 ) : $category_posts->the_post();
 	                    // Display posts
 	                    // echo get_the_title() . '<br />';
