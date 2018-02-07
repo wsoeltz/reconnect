@@ -102,7 +102,11 @@ div#content {
     @media (max-width: 570px) {
         padding-left: 20px;
         .thumbnail-image {
-            display: none;
+            position: relative;
+            margin: 0 auto 20px;
+            left: 0;
+            width: 100%;
+            height: 160px;
         }
     }
 }
@@ -471,6 +475,9 @@ nav.post-navigation {
 
 }
 @media (max-width: 750px) {
+    .home.paged main#main {
+        padding: 0 20px;
+    }
     .single-post {
         article.post {
             header.entry-header {
