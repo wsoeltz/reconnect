@@ -34,7 +34,8 @@
 <div id="mc_embed_signup">
 	<form action="https://life.us17.list-manage.com/subscribe/post?u=af8860d0aaaa7378ddb4b27c8&amp;id=45a85b2a7b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 	    <div id="mc_embed_signup_scroll">
-			<p><span>Connect with Reconnect.</span> &nbsp; Join Our Mailing List.</p>
+			<!-- <p><span>Connect with Reconnect.</span> &nbsp; Join Our Mailing List.</p> -->
+			<p style="color:#fff;">Follow my trek along the PCT</p>
 			<div class="mc-field-group">
 				<!-- <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span> -->
 				</label>
@@ -45,7 +46,7 @@
 				<div class="response" id="mce-success-response" style="display:none"></div>
 			</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 			<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_af8860d0aaaa7378ddb4b27c8_45a85b2a7b" tabindex="-1" value=""></div>
-			<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+			<div class="clear"><input type="submit" value="Follow" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
 	    </div>
 	</form>
 </div>

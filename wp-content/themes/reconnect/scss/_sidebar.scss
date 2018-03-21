@@ -28,9 +28,10 @@ div#sidebar {
 	}
 	ul.nav-menu {
 		a {
-			padding: 12px 5px;
+			padding: 7px 5px;
 			transition: background-color .2s ease;
 			letter-spacing: 1.2px;
+			line-height: 1.6em;
 			&:hover {
 				background-color: rgba($color-offWhite, .2);
 			}
