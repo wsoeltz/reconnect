@@ -572,7 +572,7 @@ div#question, div#timeRemains{
 	div#logoCircle {
 		margin-top: 20px;
 	}
-	#post-2 .entry-content p, div#basedAverage, div#subtract, div#necessities ul li, div#only33, div#sixtyPercent {
+	#post-2 .entry-content p, #post-12 .entry-content p, div#basedAverage, div#subtract, div#necessities ul li, div#only33, div#sixtyPercent {
 		font-size: 14px;
 		text-align: center;
 		line-height: 1.2em;
