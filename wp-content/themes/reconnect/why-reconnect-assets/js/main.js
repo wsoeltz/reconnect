@@ -32,7 +32,6 @@ $(document).ready(function(){
 	    }
 	    position = scroll; //changes position to current position on screen
         var windowwidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-        console.log(windowwidth);
 
         $("body").css("background-position","center "+(-position/5.25)+"px");   //updates the css to allow for slow scrolling
 
