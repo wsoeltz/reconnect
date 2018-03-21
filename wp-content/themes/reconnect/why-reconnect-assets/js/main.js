@@ -31,7 +31,8 @@ $(document).ready(function(){
              direction = 1;
 	    }
 	    position = scroll; //changes position to current position on screen
-
+        var windowwidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+        console.log(windowwidth);
 
         $("body").css("background-position","center "+(-position/5.25)+"px");   //updates the css to allow for slow scrolling
 
@@ -45,16 +46,72 @@ $(document).ready(function(){
         elementPositioning("#clock", 900, 1140, 8000, 1, 250, 1400);
 
         //Take the average life span of 79 years
-        if (position < 1700)
+        if (position < 1700) {
             elementPositioning("#basedAverage_holder", 1200, 1200, 5500, 1, 350, 1500);
-        else
+            if (windowwidth > 990) {
+                if ($("#basedAverage_holder").css('position') == 'fixed') {
+                    $("#basedAverage_holder").css({
+                        'padding-left': 200,
+                        'left': 0
+                        });
+                } else {
+                    $("#basedAverage_holder").css({
+                        'padding-left': 0,
+                        'left': -12
+                        });
+                }
+            }
+        }
+        else {
             elementPositioning("#basedAverage_holder", 1200, 1880, 5500, 1, 168, 2050);
+            if (windowwidth > 990) {
+                if ($("#basedAverage_holder").css('position') == 'fixed') {
+                    $("#basedAverage_holder").css({
+                        'padding-left':200,
+                        'left': 0
+                    });
+                } else {
+                    $("#basedAverage_holder").css({
+                        'padding-left':0,
+                        'left': -12
+                    });
+                }
+            }
+        }
 
         //and subtract
-        if (position < 2200)
+        if (position < 2200) {
             elementPositioning("#subtract_holder", 1650, 1650, 5500, 1, 350, 1500);
-        else
+            if (windowwidth > 990) {
+                if ($("#subtract_holder").css('position') == 'fixed') {
+                    $("#subtract_holder").css({
+                        'padding-left':200,
+                        'left': 0
+                    });
+                } else {
+                    $("#subtract_holder").css({
+                        'padding-left':0,
+                        'left': -12
+                    });
+                }
+            }
+        }
+        else {
             elementPositioning("#subtract_holder", 1650, 2325, 5500, 1, 226, 2550);
+            if (windowwidth > 990) {
+                if ($("#subtract_holder").css('position') == 'fixed') {
+                    $("#subtract_holder").css({
+                        'padding-left':200,
+                        'left': 0
+                    });
+                } else {
+                    $("#subtract_holder").css({
+                        'padding-left':0,
+                        'left': -12
+                    });
+                }
+            }
+        }
 
         //show necessities list
         elementPositioning("#necessities", 2150, 2450, 5500, 1, 284, 4550);
@@ -212,7 +269,7 @@ function elementPositioning(divname, startposition, minposition, maxposition, ma
             else{
                 $(divname).css({
                     "position": "absolute",
-                    "top": absoluteposition+"px"
+                    "top": (absoluteposition-150)+"px"
                 });
             }
         }
