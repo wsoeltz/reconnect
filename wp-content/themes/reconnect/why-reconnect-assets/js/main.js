@@ -40,6 +40,19 @@ $(document).ready(function(){
 
         //"How much time is spent on screen?"
         elementPositioning("#question", 200, 800, 5500, 0.9, 100, 900);
+        if (windowwidth > 990) {
+            if ($("#question").css('position') == 'fixed') {
+                $("#question").css({
+                    'padding-left':200,
+                    'left': 0
+                });
+            } else {
+                $("#question").css({
+                    'padding-left':0,
+                    'left': -12
+                });
+            }
+        }
 
         //Clock
         elementPositioning("#clock", 900, 1140, 8000, 1, 250, 1400);
