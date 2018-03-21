@@ -25,6 +25,11 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<?php if ( is_home() ): ?>
+		<meta property="og:url" content="http://reconnect.life" />
+		<meta property="og:image" content="http://reconnect.life/wp-content/uploads/2018/03/og-image.jpg" />
+		<meta name="twitter:image" content="http://reconnect.life/wp-content/uploads/2018/03/og-image.jpg">
+	<?php endif;?>
 	<!--[if lt IE 9]>
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
 	<![endif]-->
