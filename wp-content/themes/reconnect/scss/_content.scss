@@ -236,6 +236,7 @@ nav.post-navigation {
 
 .single-post {
     article.post {
+        overflow: hidden;
         header.entry-header {
             padding-top: 50vh;
             background-size: cover;
@@ -244,6 +245,8 @@ nav.post-navigation {
                 max-width: 100%;
                 padding: 80px 60px 0px 60px;
                 margin-bottom: 50px;
+                position: relative;
+                top: 1px;
                 background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(100%, rgba($color-cream,1)));
                 background: linear-gradient(to bottom, transparent 0%, rgba($color-cream,1) 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 );

@@ -25,11 +25,25 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<?php if ( is_home() ): ?>
+	<?php if ( is_home() || is_page() ) { ?>
+		<meta name="description" content="Read about all things hiking, from the Pacific Crest Trail to bushwhacking in New England to gear reviews and tips." />
 		<meta property="og:url" content="http://reconnect.life" />
 		<meta property="og:image" content="http://reconnect.life/wp-content/uploads/2018/03/og-image.jpg" />
+		<meta property="og:description" content="Read about all things hiking, from the Pacific Crest Trail to bushwhacking in New England to gear reviews and tips." />
 		<meta name="twitter:image" content="http://reconnect.life/wp-content/uploads/2018/03/og-image.jpg">
-	<?php endif;?>
+	<?php } else if ( is_single() ){
+				setup_postdata( $post );
+				$excerpt = get_the_excerpt();
+			?>
+		<meta name="description" content="<?php echo $excerpt; ?>" />
+		<meta property="og:title" content="<?php the_title(); ?>" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="<?php the_post_thumbnail_url('medium'); ?>" />
+		<meta property="og:description" content="<?php echo $excerpt; ?>" />
+		<meta name="twitter:image" content="<?php the_post_thumbnail_url('medium'); ?>">
+	<?php } else if(is_category()) { ?>
+		<meta name="description" content="<?php echo strip_tags(category_description(get_category_by_slug(get_the_category())->term_id)); ?>" />
+	<?php }?>
 	<!--[if lt IE 9]>
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
 	<![endif]-->
@@ -63,9 +77,14 @@
 
 	<div id="sidebar" class="sidebar">
 		<header id="masthead" class="site-header" role="banner">
+				<?php
+				echo "hello";
+
+				echo $excerpt;
+				echo "goodbye";
+				?>
 			<div class="site-branding">
 				<?php
-
 					if ( is_front_page() && is_home() ) : ?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'Reconnect' ); ?></a></h1>
 					<?php else : ?>

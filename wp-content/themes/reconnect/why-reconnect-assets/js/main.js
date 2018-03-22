@@ -220,6 +220,14 @@ $(document).ready(function(){
 
 
 function elementPositioning(divname, startposition, minposition, maxposition, maxopacity, fixedposition, absoluteposition){
+            var windowwidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            var positionBuffer = 150;
+            if (windowwidth < 990) {
+                positionBuffer = 220;
+            }
+            if (windowwidth < 750) {
+                positionBuffer = 100;
+            }
             if (position > startposition && position < maxposition){//hides and shows
                 $(divname).css({
                     "display": "block"
@@ -281,7 +289,7 @@ function elementPositioning(divname, startposition, minposition, maxposition, ma
             else{
                 $(divname).css({
                     "position": "absolute",
-                    "top": (absoluteposition-150)+"px"
+                    "top": (absoluteposition-positionBuffer)+"px"
                 });
             }
         }
