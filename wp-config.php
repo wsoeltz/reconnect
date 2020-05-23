@@ -19,8 +19,15 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
+// STEPS FOR RUNNING LOCALLY ->
+// 1) Start XAMP and run APACHE
+// 2) MYSQL should already be running (check)
+// 3) Site should now be up in http://localhost/reconnect/
+// 4) Site must be located in htdocs folder
+// 5) When updating the files on filezilla, ONLY UPDATE THE THEME FILES
+// 6) Common problems - make sure the table prefix (below) is correct
 /** The name of the database for WordPress */
-define('DB_NAME', 'reconnect'); //local
+define('DB_NAME', 'reconnectlifedatabase'); //local
 // define('DB_NAME', 'reconnectlifedatabase'); //godaddy
 
 /** MySQL database username */
@@ -66,7 +73,8 @@ define('NONCE_SALT',       'put your unique phrase here');
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
+
+$table_prefix  = 'wp2_';
 
 /**
  * For developers: WordPress debugging mode.
