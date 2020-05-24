@@ -26,6 +26,7 @@
 // 4) Site must be located in htdocs folder
 // 5) When updating the files on filezilla, ONLY UPDATE THE THEME FILES
 // 6) Common problems - make sure the table prefix (below) is correct
+//                    - make sure IIS is STOPPED
 /** The name of the database for WordPress */
 define('DB_NAME', 'reconnectlifedatabase'); //local
 // define('DB_NAME', 'reconnectlifedatabase'); //godaddy
@@ -74,7 +75,7 @@ define('NONCE_SALT',       'put your unique phrase here');
  * a unique prefix. Only numbers, letters, and underscores please!
  */
 
-$table_prefix  = 'wp2_';
+$table_prefix  = 'wp_';
 
 /**
  * For developers: WordPress debugging mode.
