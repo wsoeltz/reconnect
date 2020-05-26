@@ -34,8 +34,7 @@
 <div id="mc_embed_signup">
 	<form action="https://life.us17.list-manage.com/subscribe/post?u=af8860d0aaaa7378ddb4b27c8&amp;id=45a85b2a7b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 	    <div id="mc_embed_signup_scroll">
-			<!-- <p><span>Connect with Reconnect.</span> &nbsp; Join Our Mailing List.</p> -->
-			<p style="color:#fff;">Follow my trek along the PCT</p>
+			<p><span>Connect with Reconnect.</span> &nbsp; Join Our Mailing List.</p>
 			<div class="mc-field-group">
 				<!-- <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span> -->
 				</label>
