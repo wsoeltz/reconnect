@@ -46,11 +46,6 @@
 			?>
 		</section>
 		<aside class="side-content">
-			<aside class="clearfix fundraising-aside">
-				<h2><a href="https://secure.hikeformentalhealth.org/soeltz"><img src="http://reconnect.life/wp-content/uploads/2018/02/hike-for-mental-health-compressed.png" /><span class="sr-only">Hike for Mental Health</span></a></h2>
-				<!-- BEGIN z2systems.com Fundraising Sidebar Code -->
-				<script language="javascript" src="https://secure.hikeformentalhealth.org/np/publicaccess/campaignSidebar.do?campaign=102&fundraiser=8262&orgId=hike&"></script>
-				<!-- END z2systems.com Fundraising Sidebar Code --></aside>
 		</aside>
 	</div><!-- .entry-content -->
 
