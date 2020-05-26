@@ -350,6 +350,15 @@ nav.post-navigation {
     textarea {
         min-height: 100px;
     }
+    .comment-form-cookies-consent {
+        input.wp-comment-cookies-consent {
+            display: inline-block;
+            margin: 0 12px 0 0;
+        }
+        label {
+            display: inline-block;
+        }
+    }
     p.form-submit {
         text-align: right;
         margin-bottom: 30px;
